@@ -28,7 +28,8 @@ const readAndDelete = (content, file) => {
       console.error(err);
     } else {
       const parsedData = JSON.parse(data);
-      parsedData.splice(parsedData.indexOf());
+      const deleteIndex = parsedData.findIndex((x) => x.id === content);
+      parsedData.splice(deleteIndex, 1);
       writeToFile(file, parsedData);
     }
   });
@@ -63,7 +64,13 @@ notes.post("/", (req, res) => {
 
 notes.delete("/*", (req, res) => {
   console.info(`${req.method} request received for notes in the notes.js`);
-  console.info(req.params);
+
+  console.info(req.params[0]);
+
+  //create a variable that will select the specific item in
+  const deletedNote = req.params[0];
+  readAndDelete(deletedNote, "./db/db.json");
+  res.json("Deletion was a success!");
 });
 
 module.exports = notes;
