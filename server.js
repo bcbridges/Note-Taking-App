@@ -15,6 +15,7 @@ const readFromFile = util.promisify(fs.readFile);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", api);
+app.use(express.static("public"));
 
 //Sends user's to the homepage upon open
 app.get("/", (req, res) =>

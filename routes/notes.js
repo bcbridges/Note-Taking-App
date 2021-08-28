@@ -22,6 +22,18 @@ const readAndAppend = (content, file) => {
   });
 };
 
+const readAndDelete = (content, file) => {
+  fs.readFile(file, "utf8", (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const parsedData = JSON.parse(data);
+      parsedData.splice(parsedData.indexOf());
+      writeToFile(file, parsedData);
+    }
+  });
+};
+
 // GET route for receiving all the tips
 notes.get("/", (req, res) => {
   console.info(`${req.method} received for notes in the notes.js.`);
@@ -52,7 +64,6 @@ notes.post("/", (req, res) => {
 notes.delete("/*", (req, res) => {
   console.info(`${req.method} request received for notes in the notes.js`);
   console.info(req.params);
-  const currentNote = JSON.parse(req.params);
 });
 
 module.exports = notes;
