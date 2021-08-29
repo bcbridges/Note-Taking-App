@@ -28,15 +28,15 @@ There is no installation required to access this application. You can view the d
 
 ### Repository Home Page - GitHub environments
 
-![Repository Home Page](assets\images\GitHub-repoHome.PNG)
+![Repository Home Page](./assets/images/GitHub-repoHome.PNG)
 
 ### Deployment Page
 
-![GitHub Deployments Page](assets\images\GitHub-deployments.PNG)
+![GitHub Deployments Page](./assets/images/GitHub-deployments.PNG)
 
 ## Usage
 
-Once you have navigated to the deployed application page, click the 'Get Started' button in the center of the page. To add a new note, enter a title in the field labeled 'Note Title' and it's contents in the 'Note Text' field. When you have filled out the notes, click the save button located at the top right of the screen. You can view your previous notes eneterd by clicking on the title located on the left-hand pane of the page.
+Once you have navigated to the deployed application page, click the 'Get Started' button in the center of the page. To add a new note, enter a title in the field labeled 'Note Title' and it's contents in the 'Note Text' field. When you have filled out the notes, click the save button located at the top right of the screen. You can view your previous notes eneterd by clicking on the title located on the left-side pane of the page. All entries are saved to a JSON file and will be retieved when you leave and re-enter the application.
 
 Please view this video tutorial regarding the program here: https://drive.google.com/drive/folders/14xVXmIx-3Q9X21butKBDTMLtxqrjOE1-?usp=sharing
 
